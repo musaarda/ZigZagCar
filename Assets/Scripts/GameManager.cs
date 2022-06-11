@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class GameManager : SingletonDontDestroy<GameManager>
+public class GameManager : Singleton<GameManager>
 {
     public bool gameStarted;
+    public GameObject platformSpawner;
 
     protected override void Awake()
     {
@@ -32,10 +34,18 @@ public class GameManager : SingletonDontDestroy<GameManager>
     public void GameStart()
     {
         gameStarted = true;
+        platformSpawner.SetActive(true);
     }
 
     public void GameOver()
     {
+        //gameStarted = false;
+        platformSpawner.SetActive(false);
+        Invoke("ReloadLevel", 1f);
+    }
 
+    void ReloadLevel()
+    {
+        SceneManager.LoadScene("Game");
     }
 }
