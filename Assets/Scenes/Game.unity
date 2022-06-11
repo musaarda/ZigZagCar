@@ -237,7 +237,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -254,6 +254,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.3321483, y: 1.1320375, z: 2.4803872}
   m_Center: {x: 0, y: 0.5540188, z: -0.024118602}
+--- !u!114 &259048784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259048780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e43b1b04266c646bb9db39ebd9638420, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 8
 --- !u!1001 &683749757
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -648,11 +661,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5f32b7a54adcb4a439c161e4906b11d4, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5f32b7a54adcb4a439c161e4906b11d4, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5f32b7a54adcb4a439c161e4906b11d4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
